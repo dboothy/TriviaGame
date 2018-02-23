@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Trivia Game</title>
+
 	<meta name="viewport" content="width-device-width, initial- scale=1">
+
+	<title>Trivia Game</title>
+	<link href="https://fonts.googleapis.com/css?family=Barrio|Bungee+Inline|Faster+One|Londrina+Outline|Monofett|Titan+One|Vast+Shadow" rel="stylesheet">
+	<!--Trivia Game made with jQuery and Bootstrap -->
+
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 	<script type = "text/javascript" src="assets/javascript/app.js"></script>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 	<style type="text/css">
 		
 	</style>
 </head>
 <body>
-	<div class= "container" style="text-align: center;">
+<div class="content-wrap" align="center">
+<div id="heading" class="hide">
+		<h2>Time remaining: <span id="timer"></span></h2>
+	</div>
+	<div class= "container">
 		<div id = "game-wrapper">
-				<h2 id="timer" class="hide"></h2>
-				<h3 id ="correct" class = "hide">
-				</h3>
-				<h3 id = "incorrect" class="hide"></h3>
-				<div id = "main-content">
-					<h1>Play Trivia</h1>
-					<div class="row content" >
-						<div id= "buttons">
-							<button id = "startGame" class="textBox"><h2>Start</h2>
-							</button>
+				<div id="main-content">
+					<div class="content-container">
+						<h1>Movie Trivia</h1>
+						<div id="welcome">
+							<p>some text about the game here</p>
+							<button id="startGame" class="textBox">Start</button>
+						</div>
+						<div id="gameWrap" class="hide">
+							<div id="questionWrap"></div>
+							<button id="finish" class="btn btn-warning">FINISH</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 </body>
 	
 
