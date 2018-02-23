@@ -4,7 +4,7 @@ body {
 }
 
 .content-wrap {
-	background: url(../images/backgroundimage.png) no-repeat center;
+	background: url(../images/backgroundimage.png) no-repeat center fixed;
 	background-size: cover;
 	min-height: 100vh;
 }
@@ -13,6 +13,10 @@ body {
 	margin-top: 13%;
 	background-color: rgba(0,0,0,.8);
 	padding: 3% 5%;
+
+}
+#game-wrapper {
+	margin-bottom: 5%;
 }
 h1 {
 font-family: 'Faster One', cursive;
@@ -26,6 +30,24 @@ font-size: 5em;
     width: 100%;
     z-index: 999;
 }
+#alert h2 {
+	font-family: 'Faster One', cursive;
+	font-size: 50px;
+	margin: 15% 0;
+	color: #fff;
+}
+.modal-dialog {
+	width: 60%;
+	margin: 15% auto 30px;
+}
+.close {
+	color: #fff;
+}
+.modal-content {
+	background: url(../images/curtain.png) no-repeat center center;
+	background-size: cover;
+	background-color: #000;
+}
 #heading h2 {
 	margin-top: 0;
 }
@@ -35,14 +57,17 @@ h1 {
 #welcome p {
  	margin-bottom: 5%;
  }
-#startGame {
-	margin:3% 1%;
+
+button, .btn {
 	background: transparent;
-    border: 1px solid #8B0000;
-    padding: 10px 20px;
+	padding: 10px 20px;
     font-size: 28px;
     text-transform: uppercase;
     border-radius: 10px;
+}
+#startGame {
+	margin: 3% 1%;
+    border: 1px solid #8B0000;
 }
 
 #startGame:hover {
@@ -58,13 +83,19 @@ button:focus {
 	padding: 5px 0 40px;
 }
 .options {
-	background: transparent;
     border: 1px solid #337ab7;
-    padding: 10px 20px;
-    font-size: 28px;
-    text-transform: uppercase;
-    border-radius: 10px;
 }
 .options:hover, .selected {
 	background: #337ab7;
+}
+#finish {
+	margin-top: 40px;
+	border: 1px solid #f0ad4e;
+
+}
+#finish:hover {
+	background-color: #f0ad4e;
+}
+.modal-header {
+	border-bottom: none;
 }

@@ -6,11 +6,7 @@
 
 	<title>Trivia Game</title>
 	<link href="https://fonts.googleapis.com/css?family=Barrio|Bungee+Inline|Faster+One|Londrina+Outline|Monofett|Titan+One|Vast+Shadow" rel="stylesheet">
-	<!--Trivia Game made with jQuery and Bootstrap -->
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<script type = "text/javascript" src="assets/javascript/app.js"></script>
+	<!--Trivia Game made with jQuery and Bootstrap -->	
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	
@@ -32,6 +28,7 @@
 						<h1>Movie Trivia</h1>
 						<div id="welcome">
 							<p>some text about the game here</p>
+							<div id="results" class="hide"></div>
 							<button id="startGame" class="textBox">Start</button>
 						</div>
 						<div id="gameWrap" class="hide">
@@ -43,14 +40,24 @@
 			</div>
 		</div>
 	</div>
+
+
+
+	<div id="alert" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body" align="center">
+        <h2>OH NO, you are <br> out of time!</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type = "text/javascript" src="assets/javascript/app.js"></script>
 </body>
-	
-
-
-
-
-
-
-
-
 </html>

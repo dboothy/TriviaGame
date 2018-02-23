@@ -15,17 +15,25 @@ var gameArray = [
 	{
 		question: "q3",
 		options: ["London", "Paris", "Omaha", "Chicago"],
+		answer: 2	
+	},
+	{
+		question: "q3",
+		options: ["London", "Paris", "Omaha", "Chicago"],
 		answer: 1	
+	},
+	{
+		question: "q3",
+		options: ["London", "Paris", "Omaha", "Chicago"],
+		answer: 0	
 	}
 ];
 
-var right = 0;
 
-var wrong = 0;
 
-var timer = 0;
+var countDown;
 
-var answers = [null, null, null];
+var answers = [null, null, null, null, null];
 /*nulls represent the values of each question answer and are placed so that they remained unanswered until they actually are marked answered*/
 
 $(document).ready(function (){
@@ -35,6 +43,7 @@ $(document).ready(function (){
 		// hide the welome
 		$("#heading, #gameWrap").removeClass("hide");
 		$("#welcome").addClass("hide");
+		startTimer();
 		displayQuestions();
 	});
 
@@ -64,7 +73,40 @@ $(document).ready(function (){
 		//console.log(answers)
 		/*on the answers array, the first argument passed in takes the value of the question attribute to position where the options value will be updated on the answers array*/
 	})
+
+	$("#finish").on("click", function(){
+		displayResults()
+		clearInterval(countDown);
+	})
 }); 
+
+function evaluateAnswers(){
+	var unanswered = 0;
+
+	var right = 0;
+
+	var wrong = 0;
+	// evaluate answers array
+	// loop through the answers array
+	// for each answer get the value at that index
+	// check what that value is
+	//and do stuff 
+	for(var i = 0; i < answers.length; i++){
+		var selected = answers[i]
+		if(selected === null){
+			unanswered++
+		}else if(parseInt(selected) !== gameArray[i].answer){
+			wrong++
+		}else if(parseInt(selected) === gameArray[i].answer) {
+			right++
+		}
+	}
+	console.log(unanswered)
+	console.log(wrong)
+	console.log(right)
+	// display results after evaluate and update variable
+	$("#results").append(`<h3>right: ${right}</h3> <h3>wrong: ${wrong}</h3> <h3>unanswered: ${unanswered}</h3>`)
+}
 
 function displayQuestions(){
 	// write a funtion to loop through the gameArray
@@ -147,5 +189,47 @@ function displayQuestions(){
 	}
 }
 
+function displayResults(){
+	// empty the gameWrap
+	$("#alert").modal('hide');
+	$("#questionWrap, #results").empty()
 
+	// hide the heading
+	$("#heading, #gameWrap").addClass("hide")
+
+	// show welcome
+	$("#welcome, #results").removeClass("hide")
+
+	// show the final score
+	// evaluate answers before displaying results
+	evaluateAnswers();
+}
+
+
+function startTimer(){
+	var timer = 5;
+	$("#timer").text(timer)
+	// show initial timer in #timer
+
+	countDown = setInterval(function(){ 
+		$("#timer").text("");
+		--timer
+		$("#timer").text(timer);
+		// stop timer at 0
+		if(timer === 0){
+			clearInterval(countDown);
+			$("#alert").modal('show');
+			setTimeout(function(){
+			// display a modal that says out of time
+			 displayResults();
+			}, 3000)
+		}
+
+
+}, 1000);
+	// set interval
+	// every second do something
+	
+
+}
 
