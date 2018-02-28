@@ -1,31 +1,30 @@
-
 var gameArray = [
 	{
-		question: "q1",
-		options: ["London", "Paris", "Omaha", "Chicago"],
-		answer: 3	
+		question: "Which 'Friday the 13th' did Jason first wear his iconic mask?",
+		options: ["Friday the 13th", "Friday the 13th Part 2", "Friday the 13th Part 3", "Friday the 13th: The Final Chapter"],
+		answer: 2	
 	},
 
 	{
-		question: "q2",
-		options: ["London", "Paris", "Omaha", "Chicago"],
+		question: "Which film did Lawrence Fishbourne star as Russell Stevens Jr. in 1992?",
+		options: ["'Deep Cover'", "'The Matrix'", "'Boyz In Da Hood'", "The Tuskegee Airmen"],
 		answer: 0	
 	},
 
 	{
-		question: "q3",
-		options: ["London", "Paris", "Omaha", "Chicago"],
+		question: "In 'The Fast and the Furious', which car did Brian pay Dominic back with for destroying the Mitsubishi Eclipse?",
+		options: ["Subaru STI", "Nissan Skyline GT-R", "Toyota Supra", "Mercedes S500"],
 		answer: 2	
 	},
 	{
-		question: "q3",
-		options: ["London", "Paris", "Omaha", "Chicago"],
+		question: "Which nickname is used to describe an assassin in two Luc Besson films, Leon: The Professional and Nikita??",
+		options: ["'Janitor'", "'Cleaner'", "'Disposer'", "'Handyman'"],
 		answer: 1	
 	},
 	{
-		question: "q3",
-		options: ["London", "Paris", "Omaha", "Chicago"],
-		answer: 0	
+		question: "Which car does Smartie steal from Chan Ho-Nam, kicking off their camaraderie?",
+		options: ["Mazda RX-7", "BMW 335i", "Honda Civic EG Type R", "Toyota MR-2"],
+		answer: 3	
 	}
 ];
 
@@ -207,7 +206,7 @@ function displayResults(){
 
 
 function startTimer(){
-	var timer = 5;
+	var timer = 30;
 	$("#timer").text(timer)
 	// show initial timer in #timer
 
@@ -221,7 +220,7 @@ function startTimer(){
 			$("#alert").modal('show');
 			setTimeout(function(){
 			// display a modal that says out of time
-			 displayResults();
+			 //displayResults();
 			}, 3000)
 		}
 

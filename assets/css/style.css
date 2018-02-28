@@ -1,6 +1,7 @@
 body { 
 	height: 100%;	
 	font-size: 18px;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .content-wrap {
@@ -21,6 +22,9 @@ body {
 h1 {
 font-family: 'Faster One', cursive;
 font-size: 5em;
+}
+p {
+	font-size: 22px;
 }
 #heading {
 	background-color: rgba(139,0,0, .95);
@@ -98,4 +102,25 @@ button:focus {
 }
 .modal-header {
 	border-bottom: none;
+}
+
+@media screen and (max-width: 39.9375em) {
+	.container{
+		padding: 0px;
+	}
+	.content-container {
+		margin-top: 30%;
+	}
+	.modal-dialog {
+		margin: 30% auto 30px;
+		width: 100%;
+	}
+	.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle),.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child){
+		width: 100%;
+		border-radius: 10px;
+		margin: 5px 0;
+	}	
+	#questionWrap h3 {
+		font-size: 40px
+	}
 }
