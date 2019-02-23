@@ -12,7 +12,7 @@ var gameArray = [
 	},
 
 	{
-		question: "In 'The Fast and the Furious', which car did Brian pay Dominic back with for destroying the Mitsubishi Eclipse?",
+		question: "In 'The Fast and the Furious', which car did Brian pay Dominic back with for destroying his Mazda RX-7?",
 		options: ["Subaru STI", "Nissan Skyline GT-R", "Toyota Supra", "Mercedes S500"],
 		answer: 2	
 	},
@@ -51,7 +51,7 @@ $(document).ready(function (){
 
 		/*whatever option is clicked on, the number question where the option belongs to*/
 		var questionNumber = $(this).attr("question");
-		//console.log(questionNumber);
+		console.log(questionNumber);
 		// get the option "attribute" : "question" value from the button clicked
 
 		/*question value represents whichever option was clicked on*/
