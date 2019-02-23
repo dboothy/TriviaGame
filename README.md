@@ -20,6 +20,17 @@ jQuery selector methods populate the container with button classes and  provide 
 
 JavaScript provides logic for determining the score based on which button input values where chosen and how the timer counts down.
 
+![button appending](ibuttonappending.png)
+
+![answer objects array](assets/images/answerobjectsarray.png)
+
+![input hooks](assets/images/inputhooksforscores.png)
+
+![compare answers](assets/images/compareanswers.png)
+
+![populate buttons](assets/images/buttonpopultionwithattributes.png)
+
+![timer function](assets/images/starttimerfunction.png)
 
 
 
