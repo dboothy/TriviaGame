@@ -5,7 +5,7 @@ body {
 }
 
 .content-wrap {
-	background: url("../images/backgroundimage.png") no-repeat center fixed;
+	background: url("../images/backgroundImage.png") no-repeat center fixed;
 	background-size: cover;
 	min-height: 100vh;
 }
