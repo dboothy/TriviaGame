@@ -10,6 +10,9 @@ Layout and Design
 
 The bulk of the app’s content sits within a container where static buttons exist. First a ‘Start’ button to display a 30 second countdown timer on top and trigger the appearance of hidden answer input buttons to displayed questions. The second button, ‘Finish’ is there for submitting the input values and triggering the display of results of the users’ input answers compared to the actual answers of the quiz. It also kicks in the appearance of the ‘Start’ button to replay the quiz. When time runs out to 0 before the ‘Finish’ button is input, a modal fades in with a curtain message ‘out of time!’. Although, time stops at 0, users can still input answers.
 
+![alt text](questions_page.png)
+![alt text](score_results_page.png)
+
 HTML elements are laid on top of bootstrap grid columns with sizes and positions adjusted by CSS. 
 
 
