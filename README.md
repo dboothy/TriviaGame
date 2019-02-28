@@ -11,8 +11,18 @@ jQuery, Bootstrap
 
 ## Installation 
 
-link jQuery JS and CSS library CDNs
+link jQuery JS library CDN:
+<br>
+
 `<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>`
+
+link Bootstrap JS CDN and CSS library CDN:
+
+`<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>`
+
+and CSS library CDN:
+
+`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">`
 
 The bulk of the app’s content sits within a container where static buttons exist. First a ‘Start’ button to display a 30 second countdown timer on top and trigger the appearance of hidden answer input buttons to displayed questions. The second button, ‘Finish’ is there for submitting the input values and triggering the display of results of the users’ input answers compared to the actual answers of the quiz. It also kicks in the appearance of the ‘Start’ button to replay the quiz. When time runs out to 0 before the ‘Finish’ button is input, a modal fades in with a curtain message ‘out of time!’. Although, time stops at 0, users can still input answers.
 
