@@ -1,12 +1,18 @@
 # TriviaGame
 
+TrivaGame is an app game that allows users to click buttons to guess the correct answers to questions within a given allotment of time, ending when the user submits all of their answers to the questions.
 
- TrivaGame is an app game that allows users to click buttons to guess the correct answers to questions within a given allotment of time, ending when the user submits all of their answers to the questions.
+![Demo](assets/images/trivia_game_display.gif)
 
-TriviaGame was built with jQuery, bootstrap, html, css, Javascript logic and objects.
+## Libraries 
+
+jQuery, Bootstrap
 
 
-Layout and Design
+## Installation 
+
+link jQuery JS and CSS library CDNs
+`<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>`
 
 The bulk of the app’s content sits within a container where static buttons exist. First a ‘Start’ button to display a 30 second countdown timer on top and trigger the appearance of hidden answer input buttons to displayed questions. The second button, ‘Finish’ is there for submitting the input values and triggering the display of results of the users’ input answers compared to the actual answers of the quiz. It also kicks in the appearance of the ‘Start’ button to replay the quiz. When time runs out to 0 before the ‘Finish’ button is input, a modal fades in with a curtain message ‘out of time!’. Although, time stops at 0, users can still input answers.
 
