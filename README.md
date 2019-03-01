@@ -16,8 +16,8 @@ Learning how to code without repeating code and how to capture input data. The s
 ## **Installation** 
 
 Find the latest versions of jQuery and Bootstrap libraries:
-[jQuery](https://code.jquery.com/)
-[Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+- [jQuery](https://code.jquery.com/)
+- [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
 Copy and paste the Bootstrap CSS CDN link within the `<head>` tags of an HTML document
 Copy and paste the Bootstrap JS CDN link and the minified jQuery JS CDN link above the `</body>` tag
@@ -26,11 +26,20 @@ Copy and paste the Bootstrap JS CDN link and the minified jQuery JS CDN link abo
 In the HTML file, set up the elements needed for the game:
 
 ### HTML
--Countdown timer
--Space for the content
--Start button
--Finish button
--Out of time alert modal
+- Countdown timer
+- Space for the content
+- Start button
+- Finish button
+- Out of time alert modal
+
+### ID Selectors
+
+Assign IDs to elements for appropriate use such as to be selected for jQuery methods or to keep elements invisible
+
+`class = "hide"  `
+
+
+
 
 
 
