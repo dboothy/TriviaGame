@@ -34,9 +34,15 @@ In the HTML file, set up the elements needed for the game:
 
 ### ID Selectors
 
-Assign IDs to elements for appropriate use such as to be selected for jQuery methods or to keep elements invisible
+Assign IDs to elements to be selected for jQuery manipulation
 
-`class = "hide"  `
+`
+<div id = "game-wrapper">
+
+<div id="main-content">
+
+
+`
 
 
 
