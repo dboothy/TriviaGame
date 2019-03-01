@@ -25,6 +25,24 @@ Copy and paste the Bootstrap JS CDN link and the minified jQuery JS CDN link abo
 ## **Getting Started**
 In the HTML file, set up the elements needed for the game:
 
+### HTML
+-Countdown timer
+-Space for the content
+-Start button
+-Finish button
+-Out of time alert modal
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -35,4 +53,9 @@ In the HTML file, set up the elements needed for the game:
  
 
 
+
  
+
+
+ 
+
