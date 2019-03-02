@@ -27,14 +27,14 @@ In the HTML file, set up the elements needed for the game:
 
 ### HTML
 **Countdown timer:** <br>
-```
+``` HTML
 <div id="heading" class="hide">
 <h2>Time remaining: <span id="timer"></span></h2>
 </div>
 ```
 
 **Space for the questions and answer buttons content with submit finish button:** <br>
-```	
+``` HTML
 <div id="gameWrap" class="hide">
 <div id="questionWrap"></div>
 <button id="finish" class="btn btn-warning">FINISH</button>
@@ -42,7 +42,7 @@ In the HTML file, set up the elements needed for the game:
 ```
 
 **Welcome message with start button where results are hidden until after the game finishes:**
-```						
+```		HTML				
 <div id="welcome">
 <div id="results" class="hide"></div>
 <button id="startGame" class="textBox">Start</button>
@@ -50,7 +50,7 @@ In the HTML file, set up the elements needed for the game:
 ```
 
 **Out of time alert modal:**
-```
+``` HTML
 <div id="alert" class="modal fade" role="dialog">
 <div class="modal-dialog">
  <!-- Modal content-->
@@ -64,20 +64,24 @@ In the HTML file, set up the elements needed for the game:
 
 ### CSS
 - Content container:<br>
-`.content-container {
+``` CSS
+.content-container {
     color: #fff;
     margin-top: 13%;
     background-color: rgba(0,0,0,0.8);
     padding: 3% 5%;
-}`
+}
+```
 
 - Buttons:<br>
-`button, .btn {
+``` CSS
+button, .btn {
     background: transparent;
     padding: 10px 20px;
     font-size: 28px;
     text-transform: uppercase;
-    border-radius: 10px;`
+    border-radius: 10px;
+```
 
 
 
