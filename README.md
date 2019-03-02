@@ -26,7 +26,8 @@ Copy and paste the Bootstrap JS CDN link and the minified jQuery JS CDN link abo
 In the HTML file, set up the elements needed for the game:
 
 ### HTML
-- Countdown timer:  
+- Countdown timer:<br>
+
 `<div id="heading" class="hide">
 		<h2>Time remaining: <span id="timer"></span></h2>
 	</div>`
