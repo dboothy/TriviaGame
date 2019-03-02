@@ -26,14 +26,14 @@ Copy and paste the Bootstrap JS CDN link and the minified jQuery JS CDN link abo
 In the HTML file, set up the elements needed for the game:
 
 ### HTML
-- Countdown timer: <br>
+**Countdown timer:** <br>
 ```
 <div id="heading" class="hide">
 <h2>Time remaining: <span id="timer"></span></h2>
 </div>
 ```
 
-- Space for the questions and answer buttons content with submit finish button: <br>
+**Space for the questions and answer buttons content with submit finish button:** <br>
 ```	
 <div id="gameWrap" class="hide">
 <div id="questionWrap"></div>
@@ -41,7 +41,7 @@ In the HTML file, set up the elements needed for the game:
 </div>
 ```
 
-- Welcome message with start button where results are hidden until after the game finishes:
+**Welcome message with start button where results are hidden until after the game finishes:**
 ```						
 <div id="welcome">
 <div id="results" class="hide"></div>
@@ -49,7 +49,7 @@ In the HTML file, set up the elements needed for the game:
 </div><p>try and answer as many question in the time allowed</p
 ```
 
-- Out of time alert modal:
+**Out of time alert modal:**
 ```
 <div id="alert" class="modal fade" role="dialog">
 <div class="modal-dialog">
