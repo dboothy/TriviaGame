@@ -82,3 +82,63 @@ button, .btn {
     text-transform: uppercase;
     border-radius: 10px;
 ```
+
+### JavaScript
+
+**Question object (gameArray):**<br>
+
+Assign variable to an array of objects containing key value pairs to string-value 'questions', string-value answer 'options' and the numerical value of which is the correct 'answer'.
+
+``` JavaScript
+var gameArray = [
+	{
+		question: "Which 'Friday the 13th' did Jason first wear his iconic mask?",
+		options: ["Friday the 13th", "Friday the 13th Part 2", "Friday the 13th Part 3", "Friday the 13th: The Final Chapter"],
+		answer: 2	
+	},
+
+	{
+		question: "Which film did Lawrence Fishbourne star as Russell Stevens Jr. in 1992?",
+		options: ["'Deep Cover'", "'The Matrix'", "'Boyz In Da Hood'", "The Tuskegee Airmen"],
+		answer: 0	
+	},
+
+	{
+		question: "In 'The Fast and the Furious', which car did Brian pay Dominic back with for destroying his Mazda RX-7?",
+		options: ["Subaru STI", "Nissan Skyline GT-R", "Toyota Supra", "Mercedes S500"],
+		answer: 2	
+	},
+	{
+		question: "Which nickname is used to describe an assassin in two Luc Besson films, Leon: The Professional and Nikita??",
+		options: ["'Janitor'", "'Cleaner'", "'Disposer'", "'Handyman'"],
+		answer: 1	
+	},
+	{
+		question: "Which car does Smartie steal from Chan Ho-Nam, kicking off their camaraderie?",
+		options: ["Mazda RX-7", "BMW 335i", "Honda Civic EG Type R", "Toyota MR-2"],
+		answer: 3	
+	}
+];
+```
+**Answer Tracking**
+Represent the values of each answer and assign numerical value null so that they remained unanswered until they are able to be incremented and marked answered
+``` JavaScript
+var answers = [null, null, null, null, null];
+```
+
+## jQuery
+
+**Initialize game start with a button click**
+Code selects the click of the element assigned to ID 'startGame' and kicks of functions selecting elements with ID 'heading', 'gameWrap'   
+``` JavaScript
+$(document).ready(function (){
+	// start game 
+	$("#startGame").on("click", function(){
+		// show the heading
+		// hide the welome
+		$("#heading, #gameWrap").removeClass("hide");
+		$("#welcome").addClass("hide");
+		startTimer();
+		displayQuestions();
+	});
+```
