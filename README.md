@@ -129,7 +129,9 @@ var answers = [null, null, null, null, null];
 ## jQuery
 
 **Initialize game start with a button click**<br>
-Code selects the click of the element assigned to ID 'startGame' and kicks of functions selecting elements with ID 'heading', 'gameWrap'   
+Code selects the click of the element assigned to ID 'startGame' and kicks of functions selecting elements with ID 'heading', 'gameWrap' and functions that populate the gameWrap with questions and buttons as well as the function that starts the timer.
+
+These functions are built into jQuery, "removeClass" and "addClass". They manipulate the appearance of the elements on the DOM.
 ``` JavaScript
 $(document).ready(function (){
 	// start game 
@@ -142,3 +144,76 @@ $(document).ready(function (){
 		displayQuestions();
 	});
 ```
+**Timer**<br>
+Start the timer to countdown by 1 from 30 seconds and prompt modal alert when countdown decrements to 0.
+
+Select the element and pass in the variable assigned to a number 30
+
+assign variable to  function 
+
+```
+function startTimer(){
+	var timer = 30;
+	$("#timer").text(timer)
+	// show initial timer in #timer
+
+	countDown = setInterval(function(){ 
+		// $("#timer").text("");
+		--timer
+		$("#timer").text(timer);
+		// stop timer at 0
+		if(timer === 0){
+			clearInterval(countDown);
+			$("#alert").modal('show');
+			setTimeout(function(){
+			// display a modal that says out of time
+			 //displayResults();
+			}, 3000)
+		}
+
+}, 1000);
+	// set interval
+	// every second do something
+	
+}
+```
+
+## Resources 
+
+### jQuery API Documentation
+
+[**.on()**](https://goo.gl/yZMMX7)<br>
+Attach an event handler function for one or more events to the selected elements.
+
+[**.ready()**](https://goo.gl/AxpVqz)<br>
+Specify a function to execute when the DOM is fully loaded.
+
+[**.addClass()**](https://goo.gl/crHTj7)<br>
+Adds the specified class(es) to each element in the set of matched elements.
+
+[**.attr()**](https://goo.gl/a6bz4V)<br>
+Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.
+
+[**.append()**](https://goo.gl/56qcwb)<br>
+Insert content, specified by the parameter, to the end of each element in the set of matched elements.
+
+[**.text()**](https://goo.gl/3h4qku)<br>
+Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
+
+[**.removeClass()**](https://goo.gl/n6979i)<br>
+Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
+
+## MDN Web Docs
+
+[**splice()**](https://goo.gl/hT6XdR) <br>
+method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+[**Template literals (Template strings)**](https://goo.gl/tGqPt8) <br>
+Template literals are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.
+
+[**setInterval()**](https://goo.gl/nzwRB2) <br>
+repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. It returns an interval ID which uniquely identifies the interval, so you can remove it later by calling clearInterval(). 
+
+[**clearInterval()**](https://goo.gl/4DXTTh) <br>
+method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
+
