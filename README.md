@@ -126,7 +126,7 @@ Represent the values of each answer and assign numerical value null so that they
 var answers = [null, null, null, null, null];
 ```
 
-## jQuery
+### jQuery
 
 **Initialize game start with a button click**<br>
 Code selects the click of the element assigned to ID 'startGame' and kicks of functions selecting elements with ID 'heading', 'gameWrap' and functions that populate the gameWrap with questions and buttons as well as the function that starts the timer.
@@ -147,11 +147,14 @@ $(document).ready(function (){
 **Timer**<br>
 Start the timer to countdown by 1 from 30 seconds and prompt modal alert when countdown decrements to 0.
 
-Select the element and pass in the variable assigned to a number 30
+Select the element and pass in the timer variable assigned to a number length of the timer. 
 
-assign variable to  function 
+Assign variable to window method setInterval function to set the rate of when the value of timer decrements to 1000, equating to 1 second.
 
-```
+Create condition that when timer decrements to 0, the decrement should stop at 0 and the modal alert is executed. setTimout functiona also kicks off on a delay of 3000 which equates to 3 seconds.
+
+
+``` JavaScript
 function startTimer(){
 	var timer = 30;
 	$("#timer").text(timer)
@@ -217,3 +220,5 @@ repeatedly calls a function or executes a code snippet, with a fixed time delay 
 [**clearInterval()**](https://goo.gl/4DXTTh) <br>
 method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().
 
+[**setInterval()**](https://goo.gl/neVzV6) <br>
+method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires
