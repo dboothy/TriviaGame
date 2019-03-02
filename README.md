@@ -15,7 +15,7 @@ Learning how to code without repeating code and how to capture input data. The s
 
 ## **Installation** 
 
-Find the latest versions of jQuery and Bootstrap libraries:
+Find the latest versions of jQuery and Bootstrap libraries
 - [jQuery](https://code.jquery.com/)
 - [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
@@ -23,17 +23,17 @@ Copy and paste the Bootstrap CSS CDN link within the `<head>` tags of an HTML do
 Copy and paste the Bootstrap JS CDN link and the minified jQuery JS CDN link above the `</body>` tag
 
 ## **Getting Started**
-In the HTML file, set up the elements needed for the game:
+In the HTML file, set up the elements needed for the game
 
 ### HTML
-**Countdown timer:** <br>
+**Countdown timer** <br>
 ``` HTML
 <div id="heading" class="hide">
 <h2>Time remaining: <span id="timer"></span></h2>
 </div>
 ```
 
-**Space for the questions and answer buttons content with submit finish button:** <br>
+**Space for the questions and answer buttons content with submit finish button** <br>
 ``` HTML
 <div id="gameWrap" class="hide">
 <div id="questionWrap"></div>
@@ -41,7 +41,7 @@ In the HTML file, set up the elements needed for the game:
 </div>
 ```
 
-**Welcome message with start button where results are hidden until after the game finishes:**
+**Welcome message with start button where results are hidden until after the game finishes**
 ```		HTML				
 <div id="welcome">
 <div id="results" class="hide"></div>
@@ -49,7 +49,7 @@ In the HTML file, set up the elements needed for the game:
 </div><p>try and answer as many question in the time allowed</p
 ```
 
-**Out of time alert modal:**
+**Out of time alert modal**
 ``` HTML
 <div id="alert" class="modal fade" role="dialog">
 <div class="modal-dialog">
@@ -63,7 +63,7 @@ In the HTML file, set up the elements needed for the game:
  ```
 
 ### CSS
-**Content container:**<br>
+**Content container**<br>
 ``` CSS
 .content-container {
     color: #fff;
@@ -85,7 +85,7 @@ button, .btn {
 
 ### JavaScript
 
-**Question object (gameArray):**<br>
+**Question object (gameArray)**<br>
 
 Assign variable to an array of objects containing key value pairs to string-value 'questions', string-value answer 'options' and the numerical value of which is the correct 'answer'.
 
@@ -128,7 +128,7 @@ var answers = [null, null, null, null, null];
 
 ## jQuery
 
-**Initialize game start with a button click**
+**Initialize game start with a button click**<br>
 Code selects the click of the element assigned to ID 'startGame' and kicks of functions selecting elements with ID 'heading', 'gameWrap'   
 ``` JavaScript
 $(document).ready(function (){
