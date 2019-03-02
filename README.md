@@ -63,7 +63,7 @@ In the HTML file, set up the elements needed for the game:
  ```
 
 ### CSS
-- Content container:<br>
+**Content container:**<br>
 ``` CSS
 .content-container {
     color: #fff;
@@ -73,7 +73,7 @@ In the HTML file, set up the elements needed for the game:
 }
 ```
 
-- Buttons:<br>
+**Buttons:**<br>
 ``` CSS
 button, .btn {
     background: transparent;
@@ -82,34 +82,3 @@ button, .btn {
     text-transform: uppercase;
     border-radius: 10px;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
- 
-
-
- 
