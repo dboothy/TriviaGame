@@ -178,6 +178,7 @@ Append the formed elements to the existing HTML element assigned to ID questionW
 ``` JavaScript
 $("#questionWrap").append($questionGroup);
 ```
+**Entire Button Generation**
 
 
 
