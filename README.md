@@ -120,7 +120,7 @@ var gameArray = [
 	}
 ];
 ```
-**Answer Tracking**
+**Answer Tracking**<br>
 Represent the values of each answer and assign numerical value null so that they remained unanswered until they are able to be incremented and marked answered
 ``` JavaScript
 var answers = [null, null, null, null, null];
@@ -233,7 +233,7 @@ $(document).ready(function (){
 	})
 }); 
 ```
-**Initialize jQuery button functions When DOM loads**
+**Initialize jQuery button functions When DOM loads**<br>
 Wrap button functions in $( document ).ready() function   
 ``` JavaScript
 $(document).ready(function (){}); 
@@ -266,7 +266,9 @@ $(document).on("click", ".options", function(){
 	answers.splice(questionNumber, 1, questionValue);
 })
 ```
-`	var questionNumber = $(this).attr("question");` 
+```JavaScript
+var questionNumber = $(this).attr("question");
+``` 
 Captures the question number value that is associated with the answer button that is clicked on<br>
 The value is based on the value of the question object and where it's positioned along the game array <br>
 ``` JavaScript
@@ -277,8 +279,6 @@ gameArray = [{0},{1},{2},{3},{4}]
 ``` JavaScript
 var questionValue = $(this).val()
 ```
-captures the answer button 
-
 
 
 ## Resources 
