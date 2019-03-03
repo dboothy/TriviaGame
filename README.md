@@ -25,7 +25,7 @@ Copy and paste the Bootstrap JS CDN link and the minified jQuery JS CDN link abo
 ## **Getting Started**
 In the HTML file, set up the elements needed for the game
 
-### HTML
+### **HTML**
 **Countdown timer** <br>
 ``` HTML
 <div id="heading" class="hide">
@@ -62,7 +62,7 @@ In the HTML file, set up the elements needed for the game
 </div>
  ```
 
-### CSS
+### **CSS**
 **Content container**<br>
 ``` CSS
 .content-container {
@@ -83,7 +83,7 @@ button, .btn {
     border-radius: 10px;
 ```
 
-### JavaScript
+### **JavaScript**
 
 **Question object (gameArray)**<br>
 
@@ -152,7 +152,7 @@ function startTimer(){
 }
 ```
 
-### jQuery button functions
+### **jQuery button functions**
 **Generate Buttons**<br>
 For loop the array of question objects and inside of for loop, assign variables to the element structure of each question group so that it resembles this:
 ```HTML
@@ -282,9 +282,9 @@ $(document).ready(function (){
 }); 
 ```
 
-## Resources 
+## **Resources** 
 
-### jQuery API Documentation
+### **jQuery API Documentation**
 
 [**.on()**](https://goo.gl/yZMMX7)<br>
 Attach an event handler function for one or more events to the selected elements.
@@ -310,7 +310,7 @@ Get the combined text contents of each element in the set of matched elements, i
 [**.removeClass()**](https://goo.gl/n6979i)<br>
 Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
 
-## MDN Web Docs
+## **MDN Web Docs**
 
 [**splice()**](https://goo.gl/hT6XdR) <br>
 method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
