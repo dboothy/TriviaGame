@@ -175,6 +175,7 @@ $questionGroup.addClass("qGrp grp-"+i)
 ```
 <br>
 Append the formed elements to the existing HTML element assigned to ID questionWrap. <br>
+
 ``` JavaScript
 $("#questionWrap").append($questionGroup);
 ```
