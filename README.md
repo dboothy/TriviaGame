@@ -166,17 +166,16 @@ For loop the array of question objects and inside of for loop, assign variables 
 		</div>
 ```
 **$ to Dynamically Generate Elements with Text, Classes, and Attributes**<br>
+For each question a div will generate and add the class with the numerical value of the question number per its position on the array.<br>
 ``` JavaScript
 var $questionGroup = $("<div>");
 ``` 
 ``` JavaScript
 $questionGroup.addClass("qGrp grp-"+i)
 ```
-<br><br>
-For each question a div will generate and add the class with the numerical value of the question number per its position on the array.<br><br>
-
+<br>
 Append the formed elements to the existing HTML element assigned to ID questionWrap. <br>
-```JavaScript
+``` JavaScript
 $("#questionWrap").append($questionGroup);
 ```
 
