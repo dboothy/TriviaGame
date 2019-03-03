@@ -211,29 +211,7 @@ function displayQuestions(){
 	}
 }
 ```
-``` JavaScript
-$(document).ready(function (){
-	$("#startGame").on("click", function(){
-		$("#heading, #gameWrap").removeClass("hide");
-		$("#welcome").addClass("hide");
-		startTimer();
-		displayQuestions();
-	});
 
-	$(document).on("click", ".options", function(){
-		var questionNumber = $(this).attr("question");
-		var questionValue = $(this).val()
-		$(`button[question="${questionNumber}"]`).removeClass("selected");
-		$(this).addClass("selected");
-		answers.splice(questionNumber, 1, questionValue);
-	})
-
-	$("#finish").on("click", function(){
-		displayResults()
-		clearInterval(countDown);
-	})
-}); 
-```
 **Initialize jQuery button functions When DOM loads**<br>
 Wrap button functions in $( document ).ready() function   
 ``` JavaScript
@@ -280,7 +258,29 @@ gameArray = [{0},{1},{2},{3},{4}]
 ``` JavaScript
 var questionValue = $(this).val()
 ```
+``` JavaScript
+$(document).ready(function (){
+	$("#startGame").on("click", function(){
+		$("#heading, #gameWrap").removeClass("hide");
+		$("#welcome").addClass("hide");
+		startTimer();
+		displayQuestions();
+	});
 
+	$(document).on("click", ".options", function(){
+		var questionNumber = $(this).attr("question");
+		var questionValue = $(this).val()
+		$(`button[question="${questionNumber}"]`).removeClass("selected");
+		$(this).addClass("selected");
+		answers.splice(questionNumber, 1, questionValue);
+	})
+
+	$("#finish").on("click", function(){
+		displayResults()
+		clearInterval(countDown);
+	})
+}); 
+```
 
 ## Resources 
 
