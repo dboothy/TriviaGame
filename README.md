@@ -153,9 +153,9 @@ function startTimer(){
 ```
 
 ### jQuery button functions
-**Generate Buttons**
-For loop the array of question objects and inside assign variables to the element structure of each question group so that it resembles this:
-``` HTML
+**Generate Buttons**<br>
+For loop the array of question objects and inside of for loop, assign variables to the element structure of each question group so that it resembles this:
+```HTML
 		<div>
 			<h3></h3>
 			<div>
@@ -165,6 +165,25 @@ For loop the array of question objects and inside assign variables to the elemen
 			</div>
 		</div>
 ```
+**$ to Dynamically Generate Elements with Text, Classes, and Attributes**<br>
+``` JavaScript
+var $questionGroup = $("<div>");
+``` 
+``` JavaScript
+$questionGroup.addClass("qGrp grp-"+i)
+```
+<br><br>
+For each question a div will generate and add the class with the numerical value of the question number per its position on the array.<br><br>
+
+Append the formed elements to the existing HTML element assigned to ID questionWrap. <br>
+```JavaScript
+$("#questionWrap").append($questionGroup);
+```
+
+
+
+
+
 ``` JavaScript
 function displayQuestions(){
 	for(var i = 0; i < gameArray.length; i++){
@@ -250,10 +269,14 @@ $(document).on("click", ".options", function(){
 `	var questionNumber = $(this).attr("question");` 
 Captures the question number value that is associated with the answer button that is clicked on<br>
 The value is based on the value of the question object and where it's positioned along the game array <br>
-```gameArray = [{0},{1},{2},{3},{4}]```
+``` JavaScript
+gameArray = [{0},{1},{2},{3},{4}]
+```
 
 
-`var questionValue = $(this).val()`
+``` JavaScript
+var questionValue = $(this).val()
+```
 captures the answer button 
 
 
