@@ -125,25 +125,6 @@ Represent the values of each answer and assign numerical value null so that they
 ``` JavaScript
 var answers = [null, null, null, null, null];
 ```
-
-### jQuery
-
-**Initialize game start with a button click**<br>
-Code selects the click of the element assigned to ID 'startGame' and kicks of functions selecting elements with ID 'heading', 'gameWrap' and functions that populate the gameWrap with questions and buttons as well as the function that starts the timer.
-
-These functions are built into jQuery, "removeClass" and "addClass". They manipulate the appearance of the elements on the DOM.
-``` JavaScript
-$(document).ready(function (){
-	// start game 
-	$("#startGame").on("click", function(){
-		// show the heading
-		// hide the welome
-		$("#heading, #gameWrap").removeClass("hide");
-		$("#welcome").addClass("hide");
-		startTimer();
-		displayQuestions();
-	});
-```
 **Timer**<br>
 Start the timer to countdown by 1 from 30 seconds and prompt modal alert when countdown decrements to 0.
 
@@ -158,28 +139,124 @@ Create condition that when timer decrements to 0, the decrement should stop at 0
 function startTimer(){
 	var timer = 30;
 	$("#timer").text(timer)
-	// show initial timer in #timer
-
 	countDown = setInterval(function(){ 
-		// $("#timer").text("");
 		--timer
 		$("#timer").text(timer);
-		// stop timer at 0
 		if(timer === 0){
 			clearInterval(countDown);
 			$("#alert").modal('show');
 			setTimeout(function(){
-			// display a modal that says out of time
-			 //displayResults();
 			}, 3000)
 		}
-
 }, 1000);
-	// set interval
-	// every second do something
-	
 }
 ```
+
+### jQuery button functions
+**Generate Buttons**
+For loop the array of question objects and inside assign variables to the element structure of each question group so that it resembles this:
+``` HTML
+		<div>
+			<h3></h3>
+			<div>
+				<button></button>
+				<button></button>
+				<button></button>
+			</div>
+		</div>
+```
+``` JavaScript
+function displayQuestions(){
+	for(var i = 0; i < gameArray.length; i++){
+		var $questionGroup = $("<div>");
+		$questionGroup.addClass("qGrp grp-"+i)
+		var $h3 = $("<h3>");
+		$h3.text(gameArray[i].question);
+		$($questionGroup).append($h3);
+		var $btnWrap = $("<div>");
+		$btnWrap.addClass("btn-group");
+		$btnWrap.attr("role", "group");
+		$btnWrap.attr("arial-label", "Basi example")
+		for(var j = 0; j < gameArray[i].options.length; j++){
+			var $button = $("<button>");
+			$button.text(gameArray[i].options[j]);
+			$button.addClass("btn btn-primary selection")
+			$button.attr("type","button");
+			$button.attr("value",j);
+			$button.attr("question",i);
+			$($btnWrap).append($button);
+		}
+		$($questionGroup).append($btnWrap);
+		$("#questionWrap").append($questionGroup);
+	}
+}
+```
+``` JavaScript
+$(document).ready(function (){
+	$("#startGame").on("click", function(){
+		$("#heading, #gameWrap").removeClass("hide");
+		$("#welcome").addClass("hide");
+		startTimer();
+		displayQuestions();
+	});
+
+	$(document).on("click", ".options", function(){
+		var questionNumber = $(this).attr("question");
+		var questionValue = $(this).val()
+		$(`button[question="${questionNumber}"]`).removeClass("selected");
+		$(this).addClass("selected");
+		answers.splice(questionNumber, 1, questionValue);
+	})
+
+	$("#finish").on("click", function(){
+		displayResults()
+		clearInterval(countDown);
+	})
+}); 
+```
+**Initialize jQuery button functions When DOM loads**
+Wrap button functions in $( document ).ready() function   
+``` JavaScript
+$(document).ready(function (){}); 
+```
+
+**Initialize game start with a button click**<br>
+Code selects the click of the element assigned to ID 'startGame' and kicks of functions selecting elements with ID 'heading', 'gameWrap' and functions that populate the gameWrap with questions and buttons as well as the function that starts the timer.
+
+These functions are built into jQuery, "removeClass" and "addClass". They manipulate the appearance of the elements on the DOM.
+
+**Note*** '.hide' may work as '.hidden' on latest Bootstrap versions  
+
+``` JavaScript
+$("#startGame").on("click", function(){
+	$("#heading, #gameWrap").removeClass("hide");
+	$("#welcome").addClass("hide");
+	startTimer();
+	displayQuestions();
+});
+```
+
+**Hook user input answer button values with jQuery methods**<br>
+
+``` JavaScript
+$(document).on("click", ".options", function(){
+	var questionNumber = $(this).attr("question");
+	var questionValue = $(this).val()
+	$(`button[question="${questionNumber}"]`).removeClass("selected");
+	$(this).addClass("selected");
+	answers.splice(questionNumber, 1, questionValue);
+})
+```
+`	var questionNumber = $(this).attr("question");` 
+Captures the question number value that is associated with the answer button that is clicked on<br>
+The value is based on the value of the question object and where it's positioned along the game array <br>
+```gameArray = [{0},{1},{2},{3},{4}]```
+
+
+`var questionValue = $(this).val()`
+captures the answer button 
+
+
 
 ## Resources 
 
@@ -196,6 +273,9 @@ Adds the specified class(es) to each element in the set of matched elements.
 
 [**.attr()**](https://goo.gl/a6bz4V)<br>
 Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.
+
+[**.val()**](https://goo.gl/LkTyvT)<br>
+Get the current value of the first element in the set of matched elements or set the value of every matched element.
 
 [**.append()**](https://goo.gl/56qcwb)<br>
 Insert content, specified by the parameter, to the end of each element in the set of matched elements.
